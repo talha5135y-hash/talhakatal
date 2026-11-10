@@ -1,0 +1,6 @@
+{
+  "name": "Kara Kartal — Stadyum Uçuşu",
+  "description": "Beşiktaş stadyumunun üzerinde uçan Kara Kartal ile borulardan geçerek puan topla.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
