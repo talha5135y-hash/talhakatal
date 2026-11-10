@@ -956,7 +956,7 @@ export default function App() {
     w.shakeTime = 0.25;
     w.flashAlpha = 0.35;
     w.banner = {
-      text: 'KARTAL ULTİSİ AKTİF!',
+      text: 'ESMAAA🖤🤍 ULTİSİ AKTİF!',
       color: '#F59E0B',
       alpha: 1.6,
       yOffset: 0,
@@ -1577,6 +1577,19 @@ export default function App() {
         ctx.arc(8, 0, 30, -0.85, 0.85);
         ctx.stroke();
       }
+
+      // Upright nameplate above the eagle so it remains legible during flips
+      ctx.save();
+      ctx.font = '700 12px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      ctx.fillStyle = 'rgba(9, 9, 11, 0.72)';
+      const nameText = 'Esmaaa🖤🤍';
+      const nameW = ctx.measureText(nameText).width;
+      ctx.fillRect(-nameW / 2 - 6, -42, nameW + 12, 18);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(nameText, 0, -27);
+      ctx.restore();
 
       const flipAngle = flipTimer > 0 ? ((FLIP_DURATION - flipTimer) / FLIP_DURATION) * Math.PI * 2 : 0;
       ctx.rotate(birdRot + flipAngle);
@@ -2233,7 +2246,7 @@ export default function App() {
       {gameState === 'READY' && (
         <div className="pointer-events-none absolute inset-x-0 bottom-[23%] z-10 flex flex-col items-center px-4 text-center">
           <p className="font-display text-3xl sm:text-4xl font-bold tracking-wide text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]">
-            UÇUŞA HAZIR MISIN?
+            ESMAAA🖤🤍 UÇUŞA HAZIR MISIN?
           </p>
           <p className="mt-1.5 text-sm sm:text-base font-medium text-zinc-200 drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)]">
             Zıpla: Boşluk / Dokun · Takla: E · Ulti: R
@@ -2251,8 +2264,11 @@ export default function App() {
             <h1 className="font-display mt-2 text-5xl sm:text-6xl font-extrabold tracking-tight text-white text-balance">
               KARA KARTAL
             </h1>
-            <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-zinc-300">
-              Boru aralarından sıyrıl, havada takla atarak Ulti biriktir ve bonus toplarla penaltı gole git.
+            <p className="mt-1 text-sm font-bold text-white">
+              Kartal: Esmaaa🖤🤍
+            </p>
+            <p className="mt-2 text-sm sm:text-base leading-relaxed text-zinc-300">
+              Esmaaa🖤🤍 ile boru aralarından sıyrıl, havada takla atarak Ulti biriktir ve bonus toplarla penaltı gole git.
             </p>
 
             <div className="mt-5 grid grid-cols-2 gap-3 border-y border-white/10 py-4 text-center sm:grid-cols-4">
